@@ -32,3 +32,9 @@ home/ 下是 /home 里的自建小工程：
 ## 相关记录
 
 被删掉的可重建大件（Lawnchair 源码包、OpenFlip 解包副本、nowinandroid 快照、各类 build 产物与 CI 下载物）没有备份，需要时从各自上游仓库重新拉取。其余上下文见同目录清理记录与设备上的 README-removed-repos.md。
+
+## 追加：应用市场后端交接包（refdoc-backup.tar.gz）
+
+原位于 /tmp/ref_doc 的一个真实项目交接包，含 BACKEND_HANDOVER.md、SECURITY.md、supabase 的 migrations 与 functions、admin-app（管理端 Gradle 工程）与 android（应用市场客户端 Gradle 工程）。已剔除 android-sdk、build 产物与 local.properties。
+
+还原：tar xzf refdoc-backup.tar.gz，得到 appmarket-backend/ 目录。
