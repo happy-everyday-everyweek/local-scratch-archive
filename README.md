@@ -38,3 +38,16 @@ home/ 下是 /home 里的自建小工程：
 原位于 /tmp/ref_doc 的一个真实项目交接包，含 BACKEND_HANDOVER.md、SECURITY.md、supabase 的 migrations 与 functions、admin-app（管理端 Gradle 工程）与 android（应用市场客户端 Gradle 工程）。已剔除 android-sdk、build 产物与 local.properties。
 
 还原：tar xzf refdoc-backup.tar.gz，得到 appmarket-backend/ 目录。
+
+## 追加：workspace 目录备份（workspace-backup.tar.gz，2026-10-29）
+
+Operit workspace 里占空间但含独有内容的部分，打包时已剔除 node_modules、构建产物、二进制镜像与 jar。
+
+- workspace/dot-motion-builder：Next.js 工程源码（原目录 git 仓库已损坏 bad object HEAD，src 是唯一副本）
+- workspace/qoder-re：Qoder 逆向分析脚本（asar 提取、反混淆、dex 交叉引用）
+- workspace/ghidra-scripts：Ghidra 相关分析脚本
+- workspace/clk02-systemui：CLK02 单词机 SystemUI 刷写工程脚本（agowner/agscan/xref 等，不含 dex 与 jar）
+- workspace/axiom-fusion：Axiom 融合工程 FUSION_PLAN.md 等文档
+- workspace/t3code-local-changes.patch：t3code 快照上的 5 处本地改动补丁
+
+还原：tar xzf workspace-backup.tar.gz，得到 workspace/ 目录。
